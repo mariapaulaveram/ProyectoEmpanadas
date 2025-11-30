@@ -1,0 +1,201 @@
+/*Listado de productos */
+.productos-lista {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.productos-lista h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff5023;
+}
+
+.productos-lista a.agregar {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.productos-lista a.agregar:hover {
+  text-decoration: underline;
+}
+
+.productos-lista table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.productos-lista th,
+.productos-lista td {
+  padding: 1rem;
+  border: 1px solid #ddd;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.productos-lista thead {
+  background-color: #f9f9f9;
+}
+
+.productos-lista th {
+  color: #444;
+  font-weight: bold;
+}
+
+.productos-lista td img {
+  max-width: 100px;
+  height: auto;
+  border-radius: 4px;
+}
+
+/*.productos-lista td a {
+  background-color: #b4b4b4;
+  border: solid 1px #b4b4b4;
+  padding: 3px 5px;
+  border-radius: 6px;
+  text-decoration: none;
+  color: white;
+}
+
+.productos-lista td a:hover {
+  text-decoration: underline;
+}*/
+
+/* Elimina el borde inferior de la celda */
+.accionesVertical {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  padding-right: 1rem;
+  border-bottom: none !important;
+}
+
+/* Botón Modificar */
+.btn-modificar {
+  background: none;
+  border: none;
+  color: #ff5023;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 2px 0;
+  transition: color 0.2s ease;
+}
+
+.btn-modificar:hover {
+  color: #e0441f;
+  text-decoration: underline;
+}
+
+/* Botón Eliminar */
+.btn-eliminar {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 18px;
+  transition: color 0.2s ease;
+}
+
+.btn-eliminar i {
+  pointer-events: none;
+}
+
+
+
+/* Botón de agregar producto */
+.agregar-btn {
+  display: inline-block;
+  background-color: #212529;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.agregar-btn i {
+  margin-right: 6px;
+}
+
+.agregar-btn:hover {
+  background-color: #343a40;
+}
+
+
+
+
+
+/*agregar producto*/
+.producto-agregar-container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.producto-agregar-titulo {
+  font-size: 2rem;
+  color: #ff5023;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.producto-agregar-error {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.producto-agregar-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
+
+.form-input,
+.form-textarea,
+.form-file {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.producto-agregar-btn {
+  align-self: flex-start;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  border-color: #ff5023;
+  background-color: #ff5023;;
+  color: white;
+}
+
+.producto-agregar-btn:hover{
+  background-color:  #e0441f;;
+}

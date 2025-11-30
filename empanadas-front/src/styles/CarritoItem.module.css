@@ -1,0 +1,44 @@
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.info {
+  font-size: 14px;
+  color: #333;
+}
+
+.acciones {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.editar {
+  background: none;
+  border: none;
+  color: #ff5023;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.editar:hover {
+  text-decoration: underline;
+}
+
+.eliminar {
+  background: none;
+  border: none;
+  font-size: 13px;
+  color: #888;
+  cursor: pointer;
+}
+
+.eliminar:hover {
+  color: #ff5023;
+}

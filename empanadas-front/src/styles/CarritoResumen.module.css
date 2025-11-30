@@ -1,0 +1,23 @@
+.resumen {
+  margin-top: 1rem;
+  /*border-top: 1px solid #eee;*/
+  padding-top: 1rem;
+  font-size: 14px;
+  color: #333;
+}
+
+.btnContinuar {
+  margin-top: 1rem;
+  background-color: #ff5023;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btnContinuar:hover {
+  background-color: #e0441f;
+}

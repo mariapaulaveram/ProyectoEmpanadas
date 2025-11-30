@@ -1,0 +1,21 @@
+<link rel="stylesheet" href="/stylesheets/login.css">
+
+<div class="login-wrapper">
+  <h2>Ingreso al panel de administración</h2>
+
+  {{#if error}}
+    <p>{{error}}</p>
+  {{/if}}
+
+  <form method="POST" action="/admin/login">
+    <label>Usuario</label>
+    <input type="text" name="usuario" required />
+
+    <label>Clave</label>
+    <input type="password" name="clave" required />
+
+    <button type="submit">Ingresar</button>
+  </form>
+</div>
+
+

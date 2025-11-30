@@ -1,0 +1,201 @@
+.card {
+  border: none;
+  padding: 16px;
+  border-radius: 16px;
+  background-color: #fff;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.imagen {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
+}
+
+.titulo {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.precio {
+  font-size: 16px;
+  font-weight: 500;
+  color: #b85c38;
+  margin: 8px 0;
+}
+
+.descripcion {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.boton {
+  background-color: #b85c38;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s ease;
+}
+
+.boton:hover {
+  background-color: #a24f30;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 24px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+}
+
+.input {
+  width: 60px;
+  padding: 6px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.saborItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.contador {
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.error {
+  color: #d9534f;
+  font-size: 13px;
+  margin-top: 10px;
+}
+
+.confirmar {
+  background-color: #b85c38;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.confirmar:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.cancelar {
+  background-color: transparent;
+  border: none;
+  color: #666;
+  font-size: 13px;
+  margin-top: 12px;
+  cursor: pointer;
+}
+
+.saborItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  font-size: 15px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contador {
+  font-weight: bold;
+  font-size: 16px;
+  width: 32px;
+  text-align: center;
+}
+
+.btnCantidad {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btnCantidad:hover {
+  background-color: #e0e0e0;
+}
+
+.docenaSelector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 16px 0;
+}
+
+.btnDocena {
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 6px;
+  width: 36px;
+  height: 36px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btnDocena:hover {
+  background-color: #e0e0e0;
+}
+
+.docenaCantidad {
+  font-size: 18px;
+  font-weight: bold;
+  width: 40px;
+  text-align: center;
+}

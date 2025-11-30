@@ -1,0 +1,63 @@
+<link rel="stylesheet" href="/stylesheets/productos.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<div class="productos-lista">
+  <h1>Listado de productos</h1>
+
+  <a href="/admin/productosAdmin/agregar" class="btn btn-dark agregar-btn">
+    <i class="fa fa-plus"></i> Agregar nuevo producto
+  </a>
+
+  <table class="table tablaProductos">
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Descripción</th>
+        <th>Precio</th>
+        <th>Imagen</th>
+        <th class="text-end">Acciones</th>
+      </tr>
+      </thead>
+      <tbody>
+        {{#each productos}}
+        <tr>
+          <td>{{nombre}}</td>
+          <td>{{descripcion}}</td>
+          <td>${{precio}}</td>
+          <td>{{{imagen}}}</td>
+          <td>
+            <div class="accionesGrupo">
+              <button class="btn-modificar" onclick="window.location.href='/admin/productosAdmin/modificar/{{id}}'">
+                Modificar
+              </button>
+              <button class="btn-eliminar" onclick="confirmarEliminacion({{id}}, '{{nombre}}')">
+                <i class="fa-solid fa-trash"></i>
+              </button>
+            </div>
+          </td>
+          </tr>
+          {{/each}}
+          </tbody>
+          </table>
+          </div>
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+  function confirmarEliminacion(id, nombre) {
+    Swal.fire({
+      title: '¿Eliminar producto?',
+      html: `<strong>${nombre}</strong> será eliminado permanentemente.`,
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#d33',
+      cancelButtonColor: '#3085d6',
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        window.location.href = `/admin/productosAdmin/eliminar/${id}`;
+      }
+    });
+  }
+</script>
+

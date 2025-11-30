@@ -1,0 +1,13 @@
+<link rel="stylesheet" href="/stylesheets/pedidos.css">
+
+<div class="pedidos-lista">
+  <h2>Pedidos recibidos</h2>
+  <ul>
+    {{#each pedidos}}
+      <li>
+        <span><strong>#{{id}}</strong> - {{nombre_cliente}} - {{estado}}</span>
+        <a href="/admin/pedidosAdmin/{{id}}">Ver detalle</a>
+      </li>
+    {{/each}}
+  </ul>
+</div>

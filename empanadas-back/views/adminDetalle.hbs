@@ -1,0 +1,54 @@
+<link rel="stylesheet" href="/stylesheets/pedidos.css">
+
+<div class="pedido-detalle">
+    <h2>Detalle del pedido #{{pedido.id}}</h2>
+
+    <p><strong>Cliente:</strong> {{pedido.nombre_cliente}}</p>
+    <p><strong>Teléfono:</strong> {{pedido.telefono_cliente}}</p>
+    <p><strong>Tipo de entrega:</strong>
+        {{#if (eq pedido.tipo_entrega "domicilio")}}
+        <span class="badge badge-domicilio">Entrega a domicilio</span>
+        {{else}}
+        <span class="badge badge-retiro">Retiro en el local</span>
+        {{/if}}
+    </p>
+    
+    {{#if (eq pedido.tipo_entrega "domicilio")}}
+    <p><strong>Dirección:</strong> {{pedido.direccion}} {{pedido.piso_depto}}</p>
+    {{/if}}
+    <p><strong>Comentarios:</strong> {{pedido.comentarios}}</p>
+    <p><strong>Forma de pago:</strong> {{pedido.forma_pago}}</p>
+    <p><strong>Estado:</strong> {{pedido.estado}}</p>
+    <p><strong>Fecha:</strong> {{pedido.fecha_formateada}} hs</p>
+    <p><strong>Total:</strong> ${{pedido.total}}</p>
+
+
+    <form class="form-estado" action="/admin/pedidosAdmin/{{pedido.id}}/estado" method="POST">
+        <label for="estado"><strong>Modificar estado:</strong></label>
+        <select name="estado" id="estado">
+            <option value="pendiente" {{#if (eq pedido.estado "pendiente" )}}selected{{/if}}>Pendiente</option>
+            <option value="preparando" {{#if (eq pedido.estado "preparando" )}}selected{{/if}}>Preparando</option>
+            <option value="en camino" {{#if (eq pedido.estado "en camino" )}}selected{{/if}}>En camino</option>
+            <option value="entregado" {{#if (eq pedido.estado "entregado" )}}selected{{/if}}>Entregado</option>
+        </select>
+        <button type="submit">Actualizar estado</button>
+    </form>
+    
+    
+    <h3>Productos:</h3>
+    <ul>
+        {{#each detalle}}
+        <li>
+            {{cantidad}} x {{nombre_producto}} @ ${{precio_unitario}} = ${{subtotal}}
+            {{#if comentario}}
+            <br><em>📝 Comentario: {{comentario}}</em>
+            {{/if}}
+        </li>
+    
+        {{/each}}
+    </ul>
+
+  <a href="/admin/pedidosAdmin">← Volver a la lista</a>
+</div>
+
+

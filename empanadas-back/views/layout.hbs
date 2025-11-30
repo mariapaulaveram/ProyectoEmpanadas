@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{title}}</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+</head>
+
+<body>
+  <div class="admin-layout">
+    <header class="header">
+      <div class="logoFlotante">
+        <img src="/images/logo.jpeg" alt="Peña La Morena" class="logo" />
+      </div>
+      <div class="columnas">
+        <div class="col">
+            <h1 class="titulo">Peña La Morena</h1>
+          </div>
+          {{#if session.rol}}
+          <a href="/admin/login/logout" class="btn cerrar-sesion-btn">
+            <i class="fa fa-sign-out-alt"></i> Cerrar sesión
+          </a>
+          {{/if}}
+        </div>
+        </header>
+        <main class="main-content">
+          {{{body}}}
+  </main>
+  </div>
+</body>
+
+</html>

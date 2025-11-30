@@ -1,0 +1,61 @@
+.productoCard {
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  align-items: center;
+  padding: 12px 16px;
+  width: 100%;
+  max-width: 430px;
+  height: 120px;
+  border-radius: 8px;
+  box-shadow: 0 2px 9px #a199994d;
+  background-color: #fff;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-right: 12px;
+}
+
+.productoImagen {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+h3 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+}
+
+p {
+  font-size: 13px;
+  margin: 2px 0;
+  color: #555;
+}
+
+.precio {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.btnAgregar {
+  align-self: flex-start;
+  background-color: #ff5023;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.btnAgregar:hover {
+  background-color: #d35400;
+}

@@ -1,0 +1,48 @@
+<link rel="stylesheet" href="/stylesheets/productos.css">
+
+<div class="producto-agregar-container">
+  <h1 class="producto-agregar-titulo">Modificar producto</h1>
+
+  {{#if error}}
+    <p class="producto-agregar-error">{{message}}</p>
+  {{/if}}
+
+  <form action="/admin/productosAdmin/modificar" method="POST" enctype="multipart/form-data" class="producto-agregar-form">
+    <input type="hidden" name="id" value="{{producto.id}}">
+    <input type="hidden" name="img_original" value="{{producto.imagen_id}}">
+
+    <div class="form-grupo">
+      <label for="nombre" class="form-label">Nombre:</label>
+      <input type="text" name="nombre" id="nombre" class="form-input" value="{{producto.nombre}}" required>
+    </div>
+
+    <div class="form-grupo">
+      <label for="descripcion" class="form-label">Descripción:</label>
+      <textarea name="descripcion" id="descripcion" class="form-textarea" required>{{producto.descripcion}}</textarea>
+    </div>
+
+    <div class="form-grupo">
+      <label for="precio" class="form-label">Precio:</label>
+      <input type="number" name="precio" id="precio" class="form-input" step="0.01" value="{{producto.precio}}" required>
+    </div>
+
+    {{#if producto.imagen_html}}
+      <div class="form-grupo">
+        <label class="form-label">Imagen actual:</label>
+        {{{producto.imagen_html}}}
+        <label class="form-label">
+          <input type="checkbox" name="img_delete" value="1"> Eliminar imagen
+        </label>
+      </div>
+    {{/if}}
+
+    <div class="form-grupo">
+      <label for="foto" class="form-label">Reemplazar imagen:</label>
+      <input type="file" name="foto" id="foto" class="form-file" accept="image/*">
+    </div>
+
+    <button type="submit" class="btn btn-dark producto-agregar-btn">
+      <i class="fa fa-save"></i> Guardar cambios
+    </button>
+  </form>
+</div>
