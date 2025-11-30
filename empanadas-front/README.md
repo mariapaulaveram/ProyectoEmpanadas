@@ -77,11 +77,10 @@ Me inspiré en el diseño y experiencia de usuario de [menu.fu.do/more](https://
 
 ##  Cómo correr el proyecto
 
-1. Cloná el repositorio:   verrrr 
+1. Cloná el repositorio: 
 
-```bash
-git clone https://github.com/mariapaulaveram/empanadas-front.git
-```
+git clone https://github.com/mariapaulaveram/ProyectoEmpanadas/tree/main/empanadas-front 
+
 
 2. Requisitos previos
 

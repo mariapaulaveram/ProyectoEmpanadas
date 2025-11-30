@@ -2,8 +2,8 @@
 Este proyecto representa el backend de una aplicación de gestión de pedidos y productos de empanadas. Está construido con Node.js, Express, y utiliza MySQL como base de datos. Incluye autenticación por roles, vistas protegidas, y una API para el frontend.
 
 ## Instalación
-git clone https://github.com/tuusuario/empanadas-back.git VER
-cd empanadas-back
+git clone https://github.com/mariapaulaveram/ProyectoEmpanadas/tree/main/empanadas-back
+
 npm install
 
 
