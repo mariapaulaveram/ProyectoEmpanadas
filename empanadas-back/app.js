@@ -21,6 +21,7 @@ app.use(session({
   cookie: { maxAge: 1000 * 60 * 10 } // 10 minutos
 }));
 
+
 // 💾 Middleware para exponer la sesión en las vistas
 app.use((req, res, next) => {
   res.locals.session = req.session;
@@ -53,6 +54,10 @@ const pedidosRouter = require('./routes/api/pedidos');
 const usersRouter = require('./routes/users');
 
 app.use(cors());
+
+app.get('/healthz', (req, res) => {
+  res.send('ok');
+});
 
 // 🖼️ Configuración de vistas
 app.set('views', path.join(__dirname, 'views'));
