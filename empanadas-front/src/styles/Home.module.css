@@ -35,6 +35,33 @@
   gap: 2rem; /* más aire entre cards */
 }
 
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .layout {
+    flex-direction: column;   /* catálogo arriba, carrito abajo */
+    align-items: stretch;
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* una columna en tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .layout {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .carrito {
+    max-width: 100%; /* carrito ocupa todo el ancho en móviles */
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* una columna en móviles */
+    gap: 1rem;
+  }
+}
 
 
 
